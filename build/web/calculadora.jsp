@@ -22,24 +22,24 @@
                      <h1>Calculadora</h1>
                      <form method="POST" action="resultado">
                          <div class="form-group">
-                             <label for="numero">Numero 1</label>
-                                <input type="number" class="form-control" id="nombre" name="numero1" placeholder="Indique su numero">
+                             <label for="numero">valor 1</label>
+                                <input type="number" class="form-control" id="nombre" name="valor1" placeholder="Indique su numero">
                          </div>
                          
                          <div class="form-group">
-                             <label for="numero">Numero 2</label>
-                                <input type="number" class="form-control" id="nombre" name="numero2" placeholder="Indique su numero">
+                             <label for="numero">valor 2</label>
+                                <input type="number" class="form-control" id="nombre" name="valor2" placeholder="Indique su numero">
                          </div>
                          
                          <div>
-                        <input type="radio" name="gender" value="suma"> + <br>
-                        <input type="radio" name="gender" value="resta"> - <br>
-                        <input type="radio" name="gender" value="multiplicacion"> * <br>
-                        <input type="radio" name="gender" value="division"> / <br>           
+                        <input type="radio" name="opcion" value="1"> + <br>
+                        <input type="radio" name="opcion" value="2"> - <br>
+                        <input type="radio" name="opcion" value="3"> * <br>
+                        <input type="radio" name="opcion" value="4"> / <br>           
                          </div>
                          
                          <div class="form-group">
-                         <button type="submit" class="btn btn-primary">Resultado</button>
+                         <button type="submit" class="btn btn-primary">resultado</button>
                          </div>
                       
                      </form>

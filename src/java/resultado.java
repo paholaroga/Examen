@@ -71,40 +71,36 @@ public class resultado extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        float numero1 = Float.parseFloat(request.getParameter("numero1"));
-        float numero2 = Float.parseFloat(request.getParameter("numero2"));
-        String opcion; float resultado;
-        opcion = request.getParameter("opcion");
-        
-        switch (opcion){
-            case "suma":
-                resultado = numero1+numero2;
-                break;
-             
-            case "resta":
-                resultado = numero1-numero2;
+        int resultado=0;
+        int valor1= Integer.parseInt(request.getParameter("valor1"));
+        int valor2= Integer.parseInt(request.getParameter("valor2"));
+        int opcion= Integer.parseInt(request.getParameter("opcion"));
+        switch(opcion){
+            case 1:
+                resultado = valor1 + valor2;
                 break;
             
-            case "multiplicacion":
-                resultado = numero1*numero2;
+            case 2: 
+                resultado = valor1 - valor2;
                 break;
                 
-            case "division":
-                resultado = numero1/numero2;
+            case 3:
+                resultado = valor1 * valor2;
                 break;
-        
                 
-            default:
-                System.out.println("Error");
-                resultado = 0;
+            case 4:
+                resultado = valor1 / valor2; 
+                break;
+                
         }
+        request.setAttribute("valora",String.valueOf(valor1));
+        request.setAttribute("valorb",String.valueOf(valor2));
+        request.setAttribute("resultadoAB",String.valueOf(resultado));
         
-        request.setAttribute("resultado", resultado);
-        RequestDispatcher view = request.getRequestDispatcher("resultado.jsp");
-        view.forward(request, response);
-        
+        RequestDispatcher rd=request.getRequestDispatcher("resultado.jsp");
+        rd.forward(request,response);
     }
-
+        
     /**
      * Returns a short description of the servlet.
      *

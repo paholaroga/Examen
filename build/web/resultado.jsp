@@ -12,12 +12,9 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    Resultado = <%= request.getAttribute("resultado")%>
-                </div>
-            </div>
-        </div>
+        <h1>resultado</h1>
+        <%= (String) request.getAttribute("valora")%>
+        <%= (String)request.getAttribute("valorb")%>
+        <%= (String)request.getAttribute("resultadoAB")%>
     </body>
 </html>
